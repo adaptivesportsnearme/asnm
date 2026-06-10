@@ -110,10 +110,10 @@ export default function Home() {
 
             <div className="relative hidden lg:block">
               <Image
-                src="/hero-athlete.jpg"
-                alt="A young wheelchair basketball athlete lining up a shot with a coach courtside"
+                src="/alec-coaching.jpg"
+                alt="Young wheelchair basketball athletes huddled together at practice in a college gym, sharing a laugh between drills"
                 width={1100}
-                height={733}
+                height={734}
                 priority
                 className="rounded-2xl border border-card-border object-cover shadow-[var(--shadow-card-md)]"
               />
