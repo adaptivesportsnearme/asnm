@@ -31,6 +31,7 @@ jobs:
         working-directory: apps/web
         env:
           BASE_PATH: /asnm # drop when the custom domain is live
+          NEXT_PUBLIC_BASE_PATH: /asnm
       - uses: actions/upload-pages-artifact@v3
         with:
           path: apps/web/out

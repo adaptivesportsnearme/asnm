@@ -31,10 +31,18 @@ export default function Home() {
         </header>
 
         <p className="text-lg leading-relaxed text-zinc-700">
-          We&apos;re building a free, open directory of adaptive sports
-          programs across the United States — no login, no paywall, honest
-          about how fresh every listing is. The searchable directory opens
-          here soon.
+          A free, open directory of adaptive sports programs across the United
+          States — no login, no paywall, honest about how fresh every listing
+          is.
+        </p>
+
+        <p>
+          <a
+            href="programs/"
+            className="inline-block rounded-md bg-orange-600 px-6 py-3 text-lg font-semibold text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2"
+          >
+            Search the directory →
+          </a>
         </p>
 
         <dl className="grid grid-cols-2 gap-6 rounded-lg border border-zinc-200 p-6">
