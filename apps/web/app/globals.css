@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
+/* Design tokens extracted from the reference design (accessible-play.lovable.app) —
+   spec decision 13a: warm white, near-black primary, gold accent, Inter, soft radii. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(0 0% 98%);
+  --foreground: hsl(220 9% 6%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: hsl(220 9% 6%);
+  --color-ink-soft: hsl(220 6% 44%);
+  --color-primary: hsl(220 9% 10%);
+  --color-primary-hover: hsl(220 9% 20%);
+  --color-card: hsl(0 0% 100%);
+  --color-card-border: hsl(220 9% 90%);
+  --color-card-hover: hsl(220 9% 98%);
+  --color-surface: hsl(220 9% 96%);
+  --color-gold: hsl(45 93% 47%);
+  --color-gold-light: hsl(45 93% 96%);
+  --color-gold-muted: hsl(45 50% 70%);
+  --color-success: hsl(152 69% 31%);
+  --color-success-light: hsl(152 60% 94%);
+  --color-info: hsl(215 80% 52%);
+  --color-info-light: hsl(215 80% 96%);
+  --color-danger: hsl(0 72% 51%);
+  --color-danger-light: hsl(0 72% 96%);
+  --font-sans: var(--font-inter);
+  --radius-card: 0.75rem;
+  --shadow-card: 0 2px 8px -2px rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.03);
+  --shadow-card-md: 0 4px 12px -2px rgb(0 0 0 / 0.08), 0 2px 4px -2px rgb(0 0 0 / 0.04);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

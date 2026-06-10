@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 type Program = {
   id: string;
@@ -26,28 +27,29 @@ function badge(p: Program): { label: string; cls: string } {
   if (p.freshness == null)
     return {
       label: "Not yet re-checked",
-      cls: "border-zinc-300 bg-zinc-100 text-zinc-700",
+      cls: "border-card-border bg-surface text-ink-soft",
     };
   if (p.freshness >= 70)
     return {
       label: `Recently verified · ${p.freshness}%`,
-      cls: "border-green-300 bg-green-50 text-green-800",
+      cls: "border-success/30 bg-success-light text-success",
     };
   if (p.freshness >= 30)
     return {
       label: `Verified a while ago · ${p.freshness}%`,
-      cls: "border-amber-300 bg-amber-50 text-amber-800",
+      cls: "border-gold-muted bg-gold-light text-ink",
     };
   return {
     label: `Needs re-check · ${p.freshness}%`,
-    cls: "border-red-300 bg-red-50 text-red-800",
+    cls: "border-danger/30 bg-danger-light text-danger",
   };
 }
 
 export default function DirectorySearch() {
+  const searchParams = useSearchParams();
   const [programs, setPrograms] = useState<Program[] | null>(null);
   const [failed, setFailed] = useState(false);
-  const [q, setQ] = useState("");
+  const [q, setQ] = useState(searchParams.get("q") ?? "");
   const [stateFilter, setStateFilter] = useState("");
 
   useEffect(() => {
@@ -86,7 +88,7 @@ export default function DirectorySearch() {
 
   if (failed)
     return (
-      <p role="alert" className="text-red-700">
+      <p role="alert" className="text-danger">
         The program list failed to load. Please refresh, or email{" "}
         <a className="underline" href="mailto:hello@adapttolife.org">
           hello@adapttolife.org
@@ -109,7 +111,7 @@ export default function DirectorySearch() {
             onChange={(e) => setQ(e.target.value)}
             placeholder="Name, city, state, or zip"
             autoComplete="off"
-            className="w-full rounded-md border border-zinc-300 px-4 py-3 text-base focus:border-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-600/30"
+            className="w-full rounded-md border border-card-border bg-card px-4 py-3 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-gold/50"
           />
         </div>
         <div>
@@ -120,7 +122,7 @@ export default function DirectorySearch() {
             id="state"
             value={stateFilter}
             onChange={(e) => setStateFilter(e.target.value)}
-            className="rounded-md border border-zinc-300 px-3 py-3 text-base focus:border-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-600/30"
+            className="rounded-md border border-card-border bg-card px-3 py-3 text-base focus:border-ink focus:outline-none focus:ring-2 focus:ring-gold/50"
           >
             <option value="">All states</option>
             {states.map((s) => (
@@ -132,7 +134,7 @@ export default function DirectorySearch() {
         </div>
       </div>
 
-      <p aria-live="polite" className="text-sm text-zinc-600">
+      <p aria-live="polite" className="text-sm text-ink-soft">
         {programs === null
           ? "Loading 2,095 programs…"
           : `${results.length.toLocaleString()} program${results.length === 1 ? "" : "s"} found` +
@@ -147,21 +149,21 @@ export default function DirectorySearch() {
           const where = [p.city, p.state].filter(Boolean).join(", ");
           return (
             <li key={p.id}>
-              <details className="group rounded-lg border border-zinc-200 open:border-zinc-400">
+              <details className="group rounded-lg border border-card-border bg-card shadow-[var(--shadow-card)] open:border-ink/30">
                 <summary className="flex cursor-pointer flex-wrap items-center gap-x-3 gap-y-1 px-4 py-3 marker:content-none">
                   <span className="font-semibold">{p.name}</span>
-                  {where && <span className="text-zinc-600">{where}</span>}
+                  {where && <span className="text-ink-soft">{where}</span>}
                   <span
                     className={`ml-auto rounded-full border px-2 py-0.5 text-xs ${b.cls}`}
                   >
                     {b.label}
                   </span>
                 </summary>
-                <div className="flex flex-col gap-2 border-t border-zinc-200 px-4 py-3 text-sm">
+                <div className="flex flex-col gap-2 border-t border-card-border px-4 py-3 text-sm">
                   {p.website ? (
                     <p>
                       <a
-                        className="font-medium text-orange-700 underline underline-offset-4 hover:text-orange-900"
+                        className="font-medium text-info underline underline-offset-4 hover:text-ink"
                         href={p.website}
                         rel="noopener"
                       >
@@ -169,20 +171,20 @@ export default function DirectorySearch() {
                       </a>
                     </p>
                   ) : (
-                    <p className="text-zinc-600">
+                    <p className="text-ink-soft">
                       No website on file yet — our verification agents are
                       working on it.
                     </p>
                   )}
                   {p.type && (
-                    <p className="text-zinc-700">Type: {p.type}</p>
+                    <p className="text-ink">Type: {p.type}</p>
                   )}
                   {p.sources && p.sources.length > 0 && (
-                    <p className="text-zinc-600">
+                    <p className="text-ink-soft">
                       Listed by: {p.sources.join(", ")}
                     </p>
                   )}
-                  <p className="text-zinc-600">
+                  <p className="text-ink-soft">
                     {p.lastChecked
                       ? `Last automated check: ${new Date(p.lastChecked).toLocaleDateString()}`
                       : "Not yet re-checked by our agents. Spot something out of date? "}

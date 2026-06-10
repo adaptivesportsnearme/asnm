@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { SiteHeader, SiteFooter } from "@/components/site-chrome";
 
 type Meta = {
   programs: number;
@@ -19,72 +20,65 @@ export default function Home() {
   });
 
   return (
-    <div className="flex min-h-screen flex-col bg-white text-zinc-900">
-      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center gap-8 px-6 py-16">
-        <header>
-          <p className="text-sm font-semibold uppercase tracking-wide text-orange-600">
-            Adaptive Sports Near Me
-          </p>
-          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+    <div className="flex min-h-screen flex-col">
+      <SiteHeader />
+      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center gap-10 px-6 py-20">
+        <header className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Find adaptive sports programs near you.
           </h1>
+          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-ink-soft">
+            The front door to adaptive sports. Discover programs, learn the
+            game, and get playing — free, open, no login.
+          </p>
         </header>
 
-        <p className="text-lg leading-relaxed text-zinc-700">
-          A free, open directory of adaptive sports programs across the United
-          States — no login, no paywall, honest about how fresh every listing
-          is.
-        </p>
-
-        <p>
-          <a
-            href="programs/"
-            className="inline-block rounded-md bg-orange-600 px-6 py-3 text-lg font-semibold text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2"
+        <form
+          action="programs/"
+          method="get"
+          className="mx-auto flex w-full max-w-xl gap-2"
+        >
+          <label htmlFor="hero-q" className="sr-only">
+            Search by name, city, state, or zip
+          </label>
+          <input
+            id="hero-q"
+            name="q"
+            type="search"
+            placeholder="City, state, zip, or sport"
+            autoComplete="off"
+            className="w-full rounded-full border border-card-border bg-card px-6 py-4 text-base shadow-[var(--shadow-card)] focus:border-ink focus:outline-none focus:ring-2 focus:ring-gold/50"
+          />
+          <button
+            type="submit"
+            className="shrink-0 rounded-full bg-primary px-6 py-4 font-semibold text-white transition-colors hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-gold"
           >
-            Search the directory →
-          </a>
-        </p>
+            Search
+          </button>
+        </form>
 
-        <dl className="grid grid-cols-2 gap-6 rounded-lg border border-zinc-200 p-6">
-          <div>
-            <dt className="text-sm text-zinc-600">Programs catalogued</dt>
-            <dd className="text-3xl font-bold">
-              {meta.programs.toLocaleString()}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-sm text-zinc-600">Sources combined</dt>
-            <dd className="text-3xl font-bold">{meta.sources}</dd>
-          </div>
+        <dl className="mx-auto grid w-full max-w-xl grid-cols-3 gap-4">
+          {[
+            [meta.programs.toLocaleString(), "Programs listed"],
+            ["50", "States covered"],
+            [String(meta.sources), "Sources combined"],
+          ].map(([num, label]) => (
+            <div
+              key={label}
+              className="rounded-(--radius-card) border border-card-border bg-card p-4 text-center shadow-[var(--shadow-card)]"
+            >
+              <dd className="text-2xl font-bold">{num}</dd>
+              <dt className="mt-1 text-xs text-ink-soft">{label}</dt>
+            </div>
+          ))}
         </dl>
 
-        <p className="text-zinc-700">
-          Run a program, or want to know the moment we launch?{" "}
-          <a
-            className="font-semibold text-orange-700 underline underline-offset-4 hover:text-orange-900"
-            href="mailto:hello@adapttolife.org?subject=Adaptive%20Sports%20Near%20Me"
-          >
-            Email us
-          </a>{" "}
-          — a real person reads every message.
+        <p className="text-center text-sm text-ink-soft">
+          Every listing shows how fresh its information is — honestly. Updated{" "}
+          {updated}.
         </p>
       </main>
-
-      <footer className="border-t border-zinc-200">
-        <div className="mx-auto flex w-full max-w-2xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-6 text-sm text-zinc-600">
-          <span>
-            A project of <span className="font-medium">Adapt To Life</span> —
-            100% to the community.
-          </span>
-          <a
-            className="underline underline-offset-4 hover:text-zinc-900"
-            href="https://github.com/adaptivesportsnearme/asnm"
-          >
-            Open source (MIT)
-          </a>
-          <span>Data: CC BY 4.0 · updated {updated}</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
