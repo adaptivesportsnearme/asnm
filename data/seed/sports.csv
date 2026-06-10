@@ -1,0 +1,42 @@
+sport_name,sport_category,paralympic_sport,team_sport,equipment_intensive,description,governing_body,classification_system,season
+Wheelchair Basketball,indoor,TRUE,TRUE,TRUE,"A fast-paced team sport played by athletes with physical disabilities using specialized wheelchairs","International Wheelchair Basketball Federation (IWBF)","IWBF Classification System (1.0-4.5)",year-round
+Wheelchair Rugby,indoor,TRUE,TRUE,TRUE,"A full-contact team sport combining elements of basketball, handball, and rugby","International Wheelchair Rugby Federation (IWRF)","IWRF Classification System (0.5-3.5)",year-round
+Sitting Volleyball,indoor,TRUE,TRUE,FALSE,"Volleyball played from a sitting position on a smaller court with a lower net","World ParaVolley","Minimal Disability (MD) and Disabled (D)",year-round
+Goalball,indoor,TRUE,TRUE,FALSE,"A team sport designed for blind and visually impaired athletes using a ball with bells","International Blind Sports Federation (IBSA)","B1, B2, B3",year-round
+Boccia,indoor,TRUE,FALSE,FALSE,"A precision ball sport similar to bocce for athletes with severe physical disabilities","Boccia International Sports Federation (BISFed)","BC1, BC2, BC3, BC4",year-round
+Adaptive Swimming,water,TRUE,FALSE,FALSE,"Swimming competitions for athletes with physical, visual, or intellectual disabilities","World Para Swimming","S1-S14 (physical), S11-S13 (visual), S14 (intellectual)",year-round
+Para Athletics,outdoor,TRUE,FALSE,TRUE,"Track and field events adapted for athletes with physical, visual, or intellectual disabilities","World Para Athletics","Multiple classification systems by impairment type",year-round
+Wheelchair Tennis,outdoor,TRUE,FALSE,TRUE,"Tennis played in wheelchairs with modified rules allowing two bounces","International Tennis Federation (ITF)","Open, Quad",year-round
+Para Cycling,outdoor,TRUE,FALSE,TRUE,"Cycling events for athletes with physical and visual impairments using various bike types","Union Cycliste Internationale (UCI)","C1-C5 (cycling), H1-H5 (handcycling), T1-T2 (tricycle), B (tandem)",year-round
+Wheelchair Racing,outdoor,TRUE,FALSE,TRUE,"Sprint and distance racing events using specialized racing wheelchairs","World Para Athletics","T31-T34 (cerebral palsy), T51-T54 (spinal cord injury)",year-round
+Para Archery,outdoor,TRUE,FALSE,TRUE,"Archery competitions for athletes with physical disabilities","World Archery","W1 (wheelchair), Open",year-round
+Para Equestrian,outdoor,TRUE,FALSE,TRUE,"Dressage competitions for riders with physical or visual impairments","Fédération Equestre Internationale (FEI)","Grade I-V",year-round
+Adaptive Rowing,water,TRUE,TRUE,TRUE,"Rowing competitions for athletes with physical and visual impairments","World Rowing","PR1 (arms and shoulders), PR2 (trunk and arms), PR3 (legs, trunk, arms)",year-round
+Para Canoe,water,TRUE,FALSE,TRUE,"Sprint canoe and kayak events for athletes with physical impairments","International Canoe Federation (ICF)","KL1-KL3 (kayak), VL1-VL3 (va'a)",year-round
+Adaptive Sailing,water,TRUE,TRUE,TRUE,"Sailing competitions for athletes with physical disabilities","World Sailing","2.4mR, SKUD18, Sonar",year-round
+Para Powerlifting,indoor,TRUE,FALSE,TRUE,"Bench press competitions for athletes with lower limb impairments","World Para Powerlifting","Single classification",year-round
+Wheelchair Fencing,indoor,TRUE,FALSE,TRUE,"Fencing competitions conducted from wheelchairs fixed to the ground","International Wheelchair and Amputee Sports Federation (IWAS)","Category A, B",year-round
+Para Table Tennis,indoor,TRUE,FALSE,FALSE,"Table tennis for athletes with physical and intellectual disabilities","International Table Tennis Federation (ITTF)","TT1-TT5 (wheelchair), TT6-TT10 (standing), TT11 (intellectual)",year-round
+Para Badminton,indoor,TRUE,FALSE,FALSE,"Badminton for athletes with physical and short stature impairments","Badminton World Federation (BWF)","WH1-WH2 (wheelchair), SL3-SL4, SU5 (standing), SH6 (short stature)",year-round
+Para Taekwondo,indoor,TRUE,FALSE,FALSE,"Taekwondo sparring for athletes with arm impairments","World Taekwondo","K41-K44",year-round
+Blind Football,outdoor,TRUE,TRUE,FALSE,"Five-a-side football for blind and visually impaired athletes using a ball with bells","International Blind Sports Federation (IBSA)","B1 (outfield players), B2-B3 (goalkeeper)",year-round
+Para Ice Hockey,indoor,TRUE,TRUE,TRUE,"Ice hockey played on sledges for athletes with lower limb impairments","World Para Ice Hockey","Single classification",winter
+Alpine Skiing,outdoor,TRUE,FALSE,TRUE,"Downhill skiing for athletes with physical and visual impairments","World Para Snow Sports","Sitting, Standing, Visually Impaired",winter
+Nordic Skiing,outdoor,TRUE,FALSE,TRUE,"Cross-country skiing and biathlon for athletes with physical and visual impairments","World Para Snow Sports","Sitting, Standing, Visually Impaired",winter
+Snowboarding,outdoor,TRUE,FALSE,TRUE,"Snowboarding for athletes with physical impairments","World Para Snow Sports","SB-LL1, SB-LL2, SB-UL",winter
+Wheelchair Curling,indoor,TRUE,TRUE,FALSE,"Curling played from wheelchairs without sweeping","World Curling Federation","Mixed team classification",winter
+Adaptive Golf,outdoor,FALSE,FALSE,TRUE,"Golf adapted for players with various disabilities using modified equipment and rules","United States Golf Association (USGA)","N/A",year-round
+Adaptive Rock Climbing,outdoor,FALSE,FALSE,TRUE,"Rock climbing adapted for athletes with physical, visual, and cognitive disabilities","International Federation of Sport Climbing (IFSC)","N/A",year-round
+Adaptive Surfing,water,FALSE,FALSE,TRUE,"Surfing adapted for athletes with physical, visual, and cognitive disabilities","International Surfing Association (ISA)","Multiple divisions by disability type",year-round
+Adaptive Skiing,outdoor,FALSE,FALSE,TRUE,"Recreational and competitive skiing programs for all ability levels","Disabled Sports USA","N/A",winter
+Adaptive Snowboarding,outdoor,FALSE,FALSE,TRUE,"Recreational and competitive snowboarding programs for all ability levels","Disabled Sports USA","N/A",winter
+Handcycling,outdoor,FALSE,FALSE,TRUE,"Cycling using hand-powered bikes for athletes with lower limb impairments","International Handcycling Federation","H1-H5",year-round
+Sled Hockey,indoor,FALSE,TRUE,TRUE,"Ice hockey played on sleds for athletes with lower limb impairments","USA Hockey","N/A",winter
+Power Soccer,indoor,FALSE,TRUE,TRUE,"Soccer played using power wheelchairs","Federation Internationale de Powerchair Football Association (FIPFA)","N/A",year-round
+Beep Baseball,outdoor,FALSE,TRUE,FALSE,"Baseball adapted for blind and visually impaired athletes using audible balls and bases","National Beep Baseball Association","N/A",year-round
+Wheelchair Softball,outdoor,FALSE,TRUE,FALSE,"Softball adapted for wheelchair users","National Wheelchair Softball Association","N/A",year-round
+Adaptive Martial Arts,indoor,FALSE,FALSE,FALSE,"Various martial arts adapted for athletes with disabilities","Various organizations","N/A",year-round
+Adaptive Dance,indoor,FALSE,FALSE,FALSE,"Dance programs adapted for individuals with physical and developmental disabilities","Various organizations","N/A",year-round
+Adaptive Yoga,indoor,FALSE,FALSE,FALSE,"Yoga adapted for individuals with various disabilities","Accessible Yoga","N/A",year-round
+Adaptive Fitness,indoor,FALSE,FALSE,TRUE,"General fitness and strength training programs adapted for all abilities","Various organizations","N/A",year-round
+Wheelchair Lacrosse,outdoor,FALSE,TRUE,TRUE,"Lacrosse adapted for wheelchair users","Wheelchair Lacrosse USA","N/A",year-round

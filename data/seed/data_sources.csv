@@ -1,0 +1,23 @@
+source_id,source_name,source_organization,source_url,source_type,coverage_scope,data_quality_rating,record_count,status
+9d264c58-e030-42eb-bc20-99ff343083d9,CAF Directory,Challenged Athletes Foundation,https://www.challengedathletes.org/articles/adaptive-sports-organizations-nationwide/,directory,national,high,575,active
+30138172-8b6e-41f5-8ad6-872c30e9844e,NWBA Teams Directory,National Wheelchair Basketball Association,https://www.nwba.org/page/show/9144974-teams-by-division-2025-26-,registry,sport_specific,high,213,active
+27c6fa17-c207-4180-b222-d17d1df6c30c,Move United Member Directory,Move United,https://moveunitedsport.org/locations/,directory,national,high,259,active
+9078b6ce-96e0-42fd-8604-733d94dc0222,US Paralympics Club Finder,U.S. Olympic & Paralympic Committee,https://www.usopc.org/paralympic-sport-development/getting-started/find-a-club/alabama,directory,national,medium,920,active
+78f9b98c-de92-4f7e-a27f-019d85186c63,Special Olympics USA,Special Olympics,https://www.specialolympics.org/,directory,national,medium,51,active
+fe58e3ce-2214-448c-9ce6-95cfc143f3ac,Achilles International,,https://www.achillesinternational.org/chapters,directory,national,medium,12,active
+b7076f98-47a6-420c-b06a-f2ebc3fad6d3,NCHPAD,,https://www.nchpad.org/,directory,national,medium,1,active
+acff3bcc-7c8b-4280-8512-c4e1ffd3c85e,Disabled Sports USA,,https://www.disabledsportsusa.org/,directory,national,medium,11,active
+8aa20345-396b-4485-9b93-e44554c964be,USA Hockey Sled Hockey,,https://www.usahockey.com/sledhockey,directory,national,medium,12,active
+7a7d7d10-703f-43cd-b401-028eee6c0d29,USTA/ITF,,https://www.usta.com/,directory,national,medium,3,active
+8e1863e5-ff5f-417b-8af1-2739c573b28a,USRowing,,https://usrowing.org/,directory,national,medium,5,active
+4b2fee75-cf45-4c90-b054-6bbb2c92d5f6,USA Cycling,,https://usacycling.org/,directory,national,medium,4,active
+cc3b245b-ecf3-4bd8-af92-1d5c9d9ebac4,USA Swimming,,https://www.usaswimming.org/,directory,national,medium,4,active
+44fdf71f-1157-4424-b149-e66cf4635015,USATF,,https://www.usatf.org/,directory,national,medium,3,active
+03a3dbaa-25d5-4139-90b6-7d5c0d736077,USABA,,https://www.usaba.org/,directory,national,medium,3,active
+43145612-ffa9-49ea-9318-4238f329d441,BISFed USA,,https://usaboccia.org/,directory,national,medium,3,active
+46d5143e-28a2-4a04-86fb-ad573f12cc53,USA Volleyball,,https://usavolleyball.org/,directory,national,medium,3,active
+037281aa-5dec-4298-bc68-33cfd149a7b3,USPSA,,https://www.powersoccerusa.org/,directory,national,medium,2,active
+05198166-8b7c-42ff-9761-53ec3760ab55,USA Archery,,https://www.usarchery.org/,directory,national,medium,3,active
+bda90760-133e-4409-bade-ce4fb2c42722,USA Shooting,,https://www.usashooting.org/,directory,national,medium,3,active
+ee992c14-b15f-412d-8171-f324e37e69d8,USA Fencing,,https://www.usafencing.org/,directory,national,medium,2,active
+64daae7c-4242-4f87-a2d4-6e38469733ec,USA Martial Arts,,https://www.teamusa.org/,directory,national,medium,3,active

@@ -1,0 +1,16 @@
+equipment_name,equipment_type,sport_name,manufacturer,description,condition,status
+Sport Wheelchair - Basketball,Wheelchair,Wheelchair Basketball,RGK,"Lightweight aluminum sport wheelchair designed for basketball with anti-tip wheels and cambered rear wheels",excellent,available
+Sport Wheelchair - Tennis,Wheelchair,Wheelchair Tennis,Quickie,"High-performance tennis wheelchair with enhanced maneuverability and stability",good,available
+Racing Wheelchair,Wheelchair,Wheelchair Racing,Top End,"Aerodynamic three-wheel racing wheelchair for track and road racing",excellent,available
+Handcycle - Recumbent,Handcycle,Handcycling,Invacare,"Recumbent handcycle for road cycling and racing",good,available
+Mono Ski,Adaptive Ski,Alpine Skiing,Enabling Technologies,"Sit-ski with single ski for alpine skiing by individuals with lower limb disabilities",excellent,available
+Bi Ski,Adaptive Ski,Alpine Skiing,Tessier,"Sit-ski with dual skis for increased stability for alpine skiing",good,available
+Sled Hockey Sled,Sled,Sled Hockey,Bauer,"Ice hockey sled with dual blades and bucket seat",excellent,available
+Sled Hockey Sticks,Stick,Sled Hockey,Bauer,"Pair of short hockey sticks with metal picks for propulsion",excellent,available
+Goalball,Ball,Goalball,Mikasa,"Official goalball with internal bells for audible tracking",excellent,available
+Boccia Balls Set,Ball Set,Boccia,Epco,"Set of 13 boccia balls including jack ball",good,available
+Tandem Bicycle,Bicycle,Para Cycling,Co-Motion,"Tandem bicycle for visually impaired cyclists with sighted pilot",excellent,available
+Adaptive Rowing Seat,Rowing Equipment,Adaptive Rowing,Concept2,"Adaptive seat with trunk support for para rowing",good,available
+Sport Wheelchair - Rugby,Wheelchair,Wheelchair Rugby,RGK,"Reinforced sport wheelchair designed for wheelchair rugby with bumpers and spoke guards",excellent,available
+Prosthetic Running Blade,Prosthetic,Para Athletics,Össur,"Carbon fiber running blade for lower limb amputee athletes",excellent,available
+Throwing Frame,Frame,Para Athletics,Gill Athletics,"Throwing frame for seated discus and shot put athletes",good,available
