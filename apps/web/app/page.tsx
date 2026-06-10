@@ -1,65 +1,82 @@
-import Image from "next/image";
+import { readFileSync } from "node:fs";
+import path from "node:path";
+
+type Meta = {
+  programs: number;
+  states: number;
+  sources: number;
+  generatedAt: string;
+};
 
 export default function Home() {
+  const meta: Meta = JSON.parse(
+    readFileSync(path.join(process.cwd(), "public/data/meta.json"), "utf8"),
+  );
+  const updated = new Date(meta.generatedAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="flex min-h-screen flex-col bg-white text-zinc-900">
+      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center gap-8 px-6 py-16">
+        <header>
+          <p className="text-sm font-semibold uppercase tracking-wide text-orange-600">
+            Adaptive Sports Near Me
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+          <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
+            Find adaptive sports programs near you.
+          </h1>
+        </header>
+
+        <p className="text-lg leading-relaxed text-zinc-700">
+          We&apos;re building a free, open directory of adaptive sports
+          programs across the United States — no login, no paywall, honest
+          about how fresh every listing is. The searchable directory opens
+          here soon.
+        </p>
+
+        <dl className="grid grid-cols-2 gap-6 rounded-lg border border-zinc-200 p-6">
+          <div>
+            <dt className="text-sm text-zinc-600">Programs catalogued</dt>
+            <dd className="text-3xl font-bold">
+              {meta.programs.toLocaleString()}
+            </dd>
+          </div>
+          <div>
+            <dt className="text-sm text-zinc-600">Sources combined</dt>
+            <dd className="text-3xl font-bold">{meta.sources}</dd>
+          </div>
+        </dl>
+
+        <p className="text-zinc-700">
+          Run a program, or want to know the moment we launch?{" "}
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            className="font-semibold text-orange-700 underline underline-offset-4 hover:text-orange-900"
+            href="mailto:hello@adapttolife.org?subject=Adaptive%20Sports%20Near%20Me"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+            Email us
+          </a>{" "}
+          — a real person reads every message.
+        </p>
       </main>
+
+      <footer className="border-t border-zinc-200">
+        <div className="mx-auto flex w-full max-w-2xl flex-wrap items-center gap-x-6 gap-y-2 px-6 py-6 text-sm text-zinc-600">
+          <span>
+            A project of <span className="font-medium">Adapt To Life</span> —
+            100% to the community.
+          </span>
+          <a
+            className="underline underline-offset-4 hover:text-zinc-900"
+            href="https://github.com/adaptivesportsnearme/asnm"
+          >
+            Open source (MIT)
+          </a>
+          <span>Data: CC BY 4.0 · updated {updated}</span>
+        </div>
+      </footer>
     </div>
   );
 }
